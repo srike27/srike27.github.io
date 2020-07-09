@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+</head>
+
+<style>
+    body {
+        background-color: lightblue;
+    }
+    h1 {
+        color: black;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h2 {
+        color: black;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    canvas {
+        background-color:#a4b7f5;
+        border-radius: 15px;
+        position: absolute;
+        top:200px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin:auto;
+    }
+    div {
+        position: absolute;
+        top:2000px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin:auto;
+    }
+</style>
+
+<script>
+    function startGame() {
+        myGameArea.start();
+    }
+
+    var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.height = screen.height*80/100;
+            this.canvas.width = screen.width*80/100;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        }
+    }
+
+</script>
+
+<body onload="startGame()">
+    <h1>Welcome to the website of srike27</h1>
+    <h2>Click the pics to go to corresponding project</h2>
+</body>
+</html> 

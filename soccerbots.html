@@ -82,8 +82,35 @@
         background-size: cover;
         margin: 20px;
     }
+    .youtube {
+        float: auto;
+        margin-left: 250px;
+        margin-right: 100px;
+        padding: 0px;
+    }
 </style>
 </head>
 <body>
+    <h1 class="text-center" >Soccerbots - Multi Robot System</h1>
+    <div class="container">
+        <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/Vqlzkpn6trw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        <br>
+The system comprises of a set of four omnidirectional mobile robots (two per team) which is endowed with the ability to play soccer. These robots can perform various functions including passing, shooting, dribbling and goalkeeping.
+
+They are equipped with indigenous mechanisms for shooting and dribbling which enhance their ability to play the game. The master computer localises the robots using feedback from an overhead camera. The master communicates the control variables to its slaves using wifi. This multi agent system is used to test algorithms in path planning and artificial intelligence.
+
+<h3>Robot Design:</h3>
+The robot is a 3 wheel omnidirectional robot. The chassis is made up of acrylic, with aluminium L clamps to couple different parts.
+
+<h3>Shooting and Dribbling Mechanism:</h3>
+The shooting mechanism is actuated using a solenoid kicker powered using a boost converter. The dribbling mechanism consists of a dribbler actuated using a 200 RPM DC motor through a gear system. The dribbler induces a backspin on the ball, so that the ball is within the robot’s control..
+
+<h3>Control:</h3>
+The kinematic model of the robot was found from existing literature and was used to control the robot.The system is partly autonomous - one robot autonomously goalkeeps whereas the other is manually controlled.
+<h3>Robot and Ball Localisation:</h3>
+To find the present location of the robots and the ball, image processing was done in OpenCV. A wide angle camera was mounted at a height of 2.3m from the ground. A pattern was fixed on top of every robot to uniquely identify it. The image from the camera is first converted to a gray image, thresholded and the required contours are chosen based on area.
+Ball localisation is done by converting the image from the camera to a HSV image and finding the position of the ball using HSV value of the ball’s colour (The ball used is lemon yellowish and its HSV value is first calculated and given to the algorithm for it to detect the ball from the full image). Ball’s trajectory is also needed for autonomous goal keeping. The trajectory is found by finding the position of the ball in 2 consecutive frames and extending the line formed by it..
+
+    </div>
 </body>
 </html>

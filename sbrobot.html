@@ -19,7 +19,7 @@
         background: #dbdfe5;
     }
     .card {
-        border-radius: 30%;
+        border-radius: 10%;
         margin: 0 auto;
         float: none;
         margin-bottom: 10px;
@@ -37,7 +37,7 @@
         text-align: center;
     }
     .card-img-top {
-        border-radius: 30%;
+        border-radius: 10%;
     }
     .btn {
         border-radius: 5%;
@@ -82,8 +82,27 @@
         background-size: cover;
         margin: 20px;
     }
+    .youtube {
+        float: auto;
+        margin-left: 250px;
+        margin-right: 100px;
+        padding: 0px;
+    }
 </style>
 </head>
 <body>
+    <h1 class="text-center" >Self Balancing Robot Simulation</h1>
+    <div class="container">
+        <div class="card" style="width: 300px;">
+            <img src="selfbalancing.gif" class="card-img-top" alt="...">
+        </div>
+        <br>
+        Gazebo simulation of simple self balancing robot
+        <br>
+Made with cascaded PID.
+<br>
+PID for wheel speed control, PID for balancing about set point, PID for controlling set point to maintain constant velocity. 
+    </div>
+    
 </body>
 </html>

@@ -34,6 +34,18 @@
       float: none;
       margin: 0 auto;
     }
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +63,9 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="nes-container with-title" style="margin-top: 50px; margin-bottom: 50px;">
-            <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/ejuZ6P_VMMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="videoWrapper">
+            <iframe class="youtube" src="https://www.youtube.com/embed/ejuZ6P_VMMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <br>
             In the event of floods, like the one in Chennai a few years back ,there was no power, no network connectivity and many people were stranded with very minimal food and life supplies. Even though supplies were given through helicopters it was very difficult for the authorities to pinpoint places where the damage was very high. This inspired the idea of this robot.
             The Roboat, is an autonomous, floating robot. This robot can be sent into the areas where flooding is high to figure out exactly where people require help. The robot can send SOS messages in a case of shout for help or loud sound . This can be done even when there is no network connectivity with the help of mesh network formed by a swarm of these similar robots with each sending information about all robots to each other. This is like block-chaining technology used in cryptocurrency. If robot of this swarm gets momentary connection, all the information is transferred to a database.The robot's onboard GPS module enables waypoint travel in flooded streets. Upon button press the GPS info is transmitted to the mesh network.The robot's path and stability are controlled by using an IMU to get accelerometer and gyroscope data. Further ultrasonic sensors on the sides can be used to detect obstacles and the robot can avoid it. The Roboat has omnidirectional capabilities for better mobility.

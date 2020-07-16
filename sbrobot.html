@@ -34,6 +34,18 @@
       float: none;
       margin: 0 auto;
     }
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +63,7 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="nes-container with-title" style="margin-top: 50px; margin-bottom: 50px;">
-            <div class="card" style="width: 300px;">
+            <div class="card">
                 <img src="selfbalancing.gif" class="card-img-top" alt="...">
             </div>
             <br>
